@@ -1,0 +1,14 @@
+# Terraform
+.terraform/
+terraform.tfstate
+terraform.tfstate.backup
+*.tfvars
+
+# Backend config
+backend.hcl
+
+# OS
+.DS_Store
+
+# Kubernetes
+kubeconfig
