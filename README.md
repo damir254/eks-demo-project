@@ -123,6 +123,7 @@ Observed behavior during load test:
 - Symptom: Service existed but had no endpoints
 - Cause: selector did not match Pod labels
 - Fix: corrected selector
+
 ![Failure1](/project_screenshots/Failure1_Labels/Failure1Before.png)
 ![Failure1_2](/project_screenshots/Failure1_Labels/Failure1After.png)
 
@@ -131,6 +132,7 @@ Observed behavior during load test:
 - Symptom: endpoints existed but traffic failed
 - Cause: Service forwarded traffic to the wrong port
 - Fix: corrected `targetPort`
+
 ![Failure2](/project_screenshots/Failure2_TargetPort/Failure2Before1.png)
 ![Failure2_2](/project_screenshots/Failure2_TargetPort/Failure2After.png)
 
@@ -138,12 +140,14 @@ Observed behavior during load test:
 - Symptom: Pod was running but not Ready
 - Cause: invalid readiness endpoint
 - Fix: restored correct health path
+
 ![Failure3](/project_screenshots/Failure3_ReadinessProbe/Failure3.png)
 
 ### 4. Liveness probe failure
 - Symptom: container restart loop
 - Cause: invalid liveness probe path
 - Fix: restored correct health path
+
 ![Failure4](/project_screenshots/Failure4_LivenessProbe/Failure4Before.png)
 ![Failure4_2](/project_screenshots/Failure4_LivenessProbe/Failure4Before2.png)
 ![Failure4_3](/project_screenshots/Failure4_LivenessProbe/Failure4After.png)
@@ -152,6 +156,7 @@ Observed behavior during load test:
 - Symptom: container restarted after memory stress
 - Cause: memory limit exceeded
 - Fix: restored appropriate memory limits
+
 ![Failure5](/project_screenshots/Failure5_OOM/Failure5State.png)
 ![Failure5_1](/project_screenshots/Failure5_OOM/Failure5.png)
 ![Failure5_2](/project_screenshots/Failure5_OOM/Failure5After.png)
