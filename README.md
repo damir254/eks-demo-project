@@ -1,4 +1,4 @@
-# Production-Style EKS Project on AWS
+# EKS Project on AWS
 
 ## Overview
 
