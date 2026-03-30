@@ -146,7 +146,7 @@ Observed behavior during load test:
 - Fix: restored correct health path
 ![Failure4](/project_screenshots/Failure4_LivenessProbe/Failure4Before.png)
 ![Failure4_2](/project_screenshots/Failure4_LivenessProbe/Failure4Before2.png)
-![Failure4_3](/project_screenshots/Failure4_LivenessProbe/Failure4After.png)/project_screenshots/Failure5_OOM/Failure5State.png
+![Failure4_3](/project_screenshots/Failure4_LivenessProbe/Failure4After.png)
 
 ### 5. OOMKilled
 - Symptom: container restarted after memory stress
