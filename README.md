@@ -21,7 +21,7 @@ The focus was not only to deploy a working system, but to understand how it beha
 - Horizontal Pod Autoscaler
 - Prometheus + Grafana monitoring stack
 
-![Architecture](screenshots/architecture/architecture.png)
+![Architecture](/project_screenshots/architecture.png)
 
 ---
 
@@ -89,7 +89,8 @@ Observed metrics included:
 - request latency
 - scaling behavior
 
-![Grafana](screenshots/grafana/workload-cpu.png)
+![Grafana](/project_screenshots/BEFORE/beforeGrafana.png)
+![Grafana2](/project_screenshots/AFTER/afterGrafana.png)
 
 ---
 
@@ -103,16 +104,16 @@ Observed behavior during load test:
 - after load stopped: scaled back down to 2 replicas
 
 ### Before load
-![HPA Before](screenshots/hpa/before.png)
+![HPA Before](/project_screenshots/BEFORE/before.png)
 
 ### During load
-![HPA During](screenshots/hpa/during.png)
+![HPA During](/project_screenshots/DURING/during.png)
 
 ### After load
-![HPA After](screenshots/hpa/after.png)
+![HPA After](/project_screenshots/AFTER/after.png)
 
 ### HPA details
-![HPA Describe](screenshots/hpa/describe.png)
+![HPA Details](/project_screenshots/AFTER/describeAfter.png)
 
 ---
 
@@ -122,26 +123,38 @@ Observed behavior during load test:
 - Symptom: Service existed but had no endpoints
 - Cause: selector did not match Pod labels
 - Fix: corrected selector
+![Failure1](/project_screenshots/Failure1_Labels/Failure1Before.png)
+![Failure1_2](/project_screenshots/Failure1_Labels/Failure1After.png)
+
 
 ### 2. Wrong targetPort
 - Symptom: endpoints existed but traffic failed
 - Cause: Service forwarded traffic to the wrong port
 - Fix: corrected `targetPort`
+![Failure2](/project_screenshots/Failure2_TargetPort/Failure2Before1.png)
+![Failure2_2](/project_screenshots/Failure2_TargetPort/Failure2After.png)
 
 ### 3. Readiness probe failure
 - Symptom: Pod was running but not Ready
 - Cause: invalid readiness endpoint
 - Fix: restored correct health path
+![Failure3](/project_screenshots/Failure3_ReadinessProbe/Failure3.png)
 
 ### 4. Liveness probe failure
 - Symptom: container restart loop
 - Cause: invalid liveness probe path
 - Fix: restored correct health path
+![Failure4](/project_screenshots/Failure4_LivenessProbe/Failure4Before.png)
+![Failure4_2](/project_screenshots/Failure4_LivenessProbe/Failure4Before2.png)
+![Failure4_3](/project_screenshots/Failure4_LivenessProbe/Failure4After.png)/project_screenshots/Failure5_OOM/Failure5State.png
 
 ### 5. OOMKilled
 - Symptom: container restarted after memory stress
 - Cause: memory limit exceeded
 - Fix: restored appropriate memory limits
+![Failure5](/project_screenshots/Failure5_OOM/Failure5State.png)
+![Failure5_1](/project_screenshots/Failure5_OOM/Failure5.png)
+![Failure5_2](/project_screenshots/Failure5_OOM/Failure5After.png)
 
 ---
 
