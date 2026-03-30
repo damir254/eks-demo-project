@@ -1,4 +1,4 @@
-# EKS Project on AWS
+# AWS EKS Project
 
 ## Overview
 
