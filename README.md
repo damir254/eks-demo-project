@@ -165,8 +165,6 @@ Observed behavior during load test:
 
 ## Key Learnings
 
-## Key Learnings
-
 - Running does not mean Ready — readiness probes control traffic, not container state  
 - Liveness probes trigger restarts, not traffic removal  
 - HPA scales Pods, not nodes — cluster capacity still matters  
