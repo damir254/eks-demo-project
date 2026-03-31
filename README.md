@@ -90,7 +90,9 @@ Observed metrics included:
 - scaling behavior
 
 ![Grafana](/project_screenshots/BEFORE/beforeGrafana.png)
+![Grafana3](/project_screenshots/DURING/Screenshot%202026-03-30%20094621.png)
 ![Grafana2](/project_screenshots/AFTER/afterGrafana.png)
+
 
 ---
 
